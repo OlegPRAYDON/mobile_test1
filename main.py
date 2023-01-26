@@ -18,6 +18,8 @@ class mainApp(App):
         #print(window_size)
         Config.set('graphics', 'resizable', '0')
         self.table = self.parse("http://www.s10034.edu35.ru/расписание/")
+        if not os.path.isdir("data"):
+            os.mkdir("data")
         box = BoxLayout(orientation='vertical')
         box_href = BoxLayout(orientation='vertical')
         self.img_path_sp = []
